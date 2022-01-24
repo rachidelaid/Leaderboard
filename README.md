@@ -1,27 +1,28 @@
 # Webpack Boilerplate
 
-A basic webpack boilerplate, ready to be used immediately, no configuration needed. It doesn't tell you, which framework or library you should be using, it contains only a handful of modules:
+This is a leaderboard app to displays scores submitted by different players. All data is preserved thanks to the external leaderboard API.
 
+![screenshot](./src/screenshot.png)
+
+## Built using
+
+- HTML
+- CSS
+- JavaScript
 - Webpack
-- html-webpack-plugin
-- css-loader
-- style-loader
-- webpack-dev-server
-
-Everything else is up to you.
 
 ## Usage
 
 start by cloning this repository by running:
 
 ```
-git clone https://github.com/rachidelaid/webpack-boilerplate.git
+git clone https://github.com/rachidelaid/Leaderboard.git
 ```
 
 cd to the folder
 
 ```
-cd webpack-boilerplate
+cd Leaderboard
 ```
 
 run this command to install all the packages needed

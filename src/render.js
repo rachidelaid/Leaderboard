@@ -1,4 +1,4 @@
-export default function renderList(list) {
+const renderList = (list) => {
   const container = document.querySelector('.list ul');
   container.innerHTML = '';
 
@@ -7,11 +7,15 @@ export default function renderList(list) {
     return;
   }
 
-  list.forEach((score, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${score.user}: ${score.score}`;
-    li.id = index;
+  list
+    .sort((a, b) => b.score - a.score)
+    .forEach((score, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${score.user}: ${score.score}`;
+      li.id = index;
 
-    container.append(li);
-  });
-}
+      container.append(li);
+    });
+};
+
+export default renderList;
