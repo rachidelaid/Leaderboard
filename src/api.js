@@ -1,14 +1,16 @@
-const url =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/c3bjRSVNPwLd72pipnVZ/scores';
+const apiKey = 'c3bjRSVNPwLd72pipnVZ';
 
 const setScore = async (score) => {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${apiKey}/scores`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(score),
     },
-    body: JSON.stringify(score),
-  });
+  );
 
   const { result } = await response.json();
 
@@ -16,7 +18,9 @@ const setScore = async (score) => {
 };
 
 const getScores = async () => {
-  const response = await fetch(url);
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${apiKey}/scores`,
+  );
 
   const { result } = await response.json();
 
